@@ -1,4 +1,5 @@
 import React from "react";
+//import React, { Component } from "react"; para poner solo Component
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -23,7 +24,22 @@ import "./App.css";
   );
 } */
 
-function App() {
+class App extends React.Component {
+  state = {};
+  render() {
+    return (
+      <div className="App">
+        <input type="text" placeholder="Usuario" name="username" />
+        <input type="password" placeholder="Contraseña" name="psw" />
+        <button type="submit">Entrar</button>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/* function App() {
   return (
     <div className="App">
       <input type="text" placeholder="Usuario" name="username" />
@@ -31,6 +47,4 @@ function App() {
       <button type="submit">Entrar</button>
     </div>
   );
-}
-
-export default App;
+} */
