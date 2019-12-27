@@ -25,13 +25,28 @@ import "./App.css";
 } */
 
 class App extends React.Component {
-  state = {};
+  state = {
+    username: null,
+    password: null
+  };
+
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    console.log("Entre");
+  }
+
   render() {
     return (
       <div className="App">
         <input type="text" placeholder="Usuario" name="username" />
         <input type="password" placeholder="Contraseña" name="psw" />
-        <button type="submit">Entrar</button>
+        <button onClick={() => this.handleClick()} type="submit">
+          Entrar
+        </button>
       </div>
     );
   }
