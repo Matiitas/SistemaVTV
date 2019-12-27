@@ -38,11 +38,11 @@ class App extends React.Component {
   }
 
   handleChangeUsr(event) {
-    this.setState({ username: event.target.username });
+    this.setState({ username: event.target.value });
   }
 
   handleChangePsw(event) {
-    this.setState({ password: event.target.password });
+    this.setState({ password: event.target.value });
   }
 
   handleClick() {
@@ -56,14 +56,14 @@ class App extends React.Component {
           type="text"
           placeholder="Usuario"
           name="username"
-          value={this.state.username}
+          value={this.state.value}
           onChange={this.handleChangeUsr}
         />
         <input
           type="password"
           placeholder="Contraseña"
           name="psw"
-          value={this.state.password}
+          value={this.state.value}
           onChange={this.handleChangePsw}
         />
         <button onClick={() => this.handleClick()} type="submit">
