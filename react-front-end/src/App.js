@@ -26,11 +26,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div className="login">
-        <input type="text" placeholder="Usuario" name="username" />
-        <input type="text" placeholder="Contraseña" name="psw" />
-        <button type="submit">Entrar</button>
-      </div>
+      <input type="text" placeholder="Usuario" name="username" />
+      <input type="password" placeholder="Contraseña" name="psw" />
+      <button type="submit">Entrar</button>
     </div>
   );
 }
