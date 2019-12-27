@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 //import React, { Component } from "react"; para poner solo Component
 import logo from "./logo.svg";
 import "./App.css";
@@ -46,7 +47,17 @@ class App extends React.Component {
   }
 
   handleClick() {
-    console.log("Entre");
+    axios
+      .post("http://localhost:8000/api/auth/login/", {
+        username: this.state.username,
+        password: this.state.password
+      })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(response => {
+        console.log(response);
+      });
   }
 
   render() {
