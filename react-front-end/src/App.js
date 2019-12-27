@@ -33,6 +33,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleChangeUsr = this.handleChangeUsr.bind(this);
+    this.handleChangePsw = this.handleChangePsw.bind(this);
+  }
+
+  handleChangeUsr(event) {
+    this.setState({ username: event.target.username });
+  }
+
+  handleChangePsw(event) {
+    this.setState({ password: event.target.password });
   }
 
   handleClick() {
@@ -42,8 +52,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <input type="text" placeholder="Usuario" name="username" />
-        <input type="password" placeholder="Contraseña" name="psw" />
+        <input
+          type="text"
+          placeholder="Usuario"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleChangeUsr}
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          name="psw"
+          value={this.state.password}
+          onChange={this.handleChangePsw}
+        />
         <button onClick={() => this.handleClick()} type="submit">
           Entrar
         </button>
