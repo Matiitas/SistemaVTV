@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +19,18 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+  );
+} */
+
+function App() {
+  return (
+    <div className="App">
+      <div className="login">
+        <input type="text" placeholder="Usuario" name="username" />
+        <input type="text" placeholder="Contraseña" name="psw" />
+        <button type="submit">Entrar</button>
+      </div>
     </div>
   );
 }
